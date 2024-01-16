@@ -13,3 +13,27 @@
     margin-top: 3%;
     border: 1px solid black;
 }
+
+.title {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.inputs{
+    margin-left: auto;
+    width: 90%;
+}
+
+.checkbox{
+    position: relative;
+    margin-left: 10%;
+}
