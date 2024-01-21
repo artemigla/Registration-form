@@ -3,15 +3,19 @@
     padding: 0;
 }
 
-.container{
+.container {
     display: flex;
     width: 30dvw;
     height: 80dvh;
+    position: relative;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     border-radius: 12px;
-    margin-top: 3%;
-    border: 1px solid black;
+    top: 3%;
+    -webkit-box-shadow: 1px 1px 8px 5px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 1px 1px 8px 5px rgba(0, 0, 0, 0.18);
+    box-shadow: 1px 1px 8px 5px rgba(0, 0, 0, 0.18);
 }
 
 .title {
@@ -19,21 +23,31 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 .wrapper {
     display: flex;
     position: relative;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+input {
+    font-size: large;
+    outline: none;
+    width: 100%;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
     width: 80%;
+    align-items: center;
+    gap: 12px;
 }
 
-.inputs{
-    margin-left: auto;
-    width: 90%;
-}
-
-.checkbox{
+.checkbox {
     position: relative;
-    margin-left: 10%;
+    margin-left: -95%;
 }

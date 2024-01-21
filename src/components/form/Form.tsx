@@ -1,39 +1,45 @@
 import React from 'react';
-import { InputFields } from '../inputs/InputFields';
-import './style.css';
 import { Button } from '../button/Button';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { IFormValue } from '../../interface/interfaces';
+import './style.css';
+
 
 export const Form: React.FC = () => {
 
-    const handlerButton = () => {
-        console.log('Button');
-    }
-    
+    const { register, handleSubmit, formState: { errors } } = useForm<IFormValue>();
+
+    const onSubmit: SubmitHandler<IFormValue> = (data) => console.log(data);
+
     return (
         <div className='container'>
-            <div className='wrapper'>
-                <div className='title'>
-                    <h3>Registration</h3>
-                </div>
-                <div className='inputs'>
-                    <h5>First name</h5>
-                    <InputFields type='text' />
-                    <h5>Last name</h5>
-                    <InputFields type='text' />
-                    <h5>E-mail</h5>
-                    <InputFields type='mail' />
-                    <h5>Password</h5>
-                    <InputFields type='password' />
-                    <h5>Repeat password</h5>
-                    <InputFields type='password' />
-                </div>
-                <div className='checkbox'>
-                    <input type="checkbox" />
-                </div>
-                <div>
-                    <Button label='Registration' onClick={handlerButton} />
-                </div>
+            <div className='title'>
+                <h4>Registration form</h4>
             </div>
+            <form className='wrapper' onSubmit={handleSubmit(onSubmit)}>
+                <div className='inputs' >
+                    <input
+                        placeholder='First name'
+                        {...register("firstName", { required: 'Error' })} />
+                    <input
+                        placeholder='Last name'
+                        {...register("lastName")} />
+                    <input
+                        placeholder='Email'
+                        type="email" {...register("email")} />
+                    <input
+                        placeholder='Phone number'
+                        {...register("phone")} />
+                    <input
+                        placeholder='Password'
+                        type='password'{...register("password")} />
+                    <input
+                        placeholder='Confirm password'
+                        type="password" {...register("confirmPassword")} />
+                    <input className='checkbox' type="checkbox" />
+                    <Button onClick={() => onSubmit} label='Registration' />
+                </div>
+            </form>
         </div>
     )
 }
