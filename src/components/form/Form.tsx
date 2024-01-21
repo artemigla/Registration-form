@@ -7,7 +7,7 @@ import './style.css';
 
 export const Form: React.FC = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm<IFormValue>();
+    const { register, handleSubmit } = useForm<IFormValue>();
 
     const onSubmit: SubmitHandler<IFormValue> = (data) => console.log(data);
 
