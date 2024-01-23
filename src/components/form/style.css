@@ -31,7 +31,6 @@
     justify-content: center;
     align-items: center;
     padding: 10px 0 10px 0;
-    border: 1px solid black;
     width: 100%;
 }
 
@@ -52,4 +51,26 @@ input {
 .checkbox {
     position: relative;
     margin-left: -95%;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        width: 100%;
+        height: 80dvh;
+        position: relative;
+        flex-direction: column;
+        -webkit-box-shadow: 1px 1px 8px 5px rgba(0, 0, 0, 0.18);
+        -moz-box-shadow: 1px 1px 8px 5px rgba(0, 0, 0, 0.18);
+        box-shadow: 1px 1px 8px 5px rgba(0, 0, 0, 0.18);
+    }
+
+    .wrapper {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+    }
 }
