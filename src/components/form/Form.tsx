@@ -3,6 +3,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { IFormValue } from '../../interface/interfaces';
 import { Flags } from '../flags/Flags';
 import './style.css';
+import { Phone } from '../phone/Phone';
 
 export const Form: React.FC = () => {
 
@@ -46,14 +47,15 @@ export const Form: React.FC = () => {
                         {errors.lastName && <p style={{ color: 'red' }}>Field is required</p>}
                     </div>
                     <Flags />
-                    <div className='inputcontent'>
+                    {/* <div className='inputcontent'>
                         <i className="fa fa-phone-square" style={{ fontSize: '24px' }}></i>
                         <input
                             type='tel'
                             placeholder='Phone'
                             {...register("phone", { required: false, pattern: /^\+\d{2}\(\d{3}\)\d{3}-\d{2}-\d{2}$/ })} />
                         {errors.email && <p style={{ color: 'red' }}>Field is required</p>}
-                    </div>
+                    </div> */}
+                    <Phone />
                     <div className='inputcontent'>
                         <i className="fa fa-envelope" style={{ fontSize: '24px' }}></i>
                         <input
