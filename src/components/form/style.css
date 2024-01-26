@@ -48,9 +48,91 @@ input {
     gap: 30px;
 }
 
+.inputcontent {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+i.fa {
+    width: 26px;
+    top: 2px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    margin-right: -26px;
+    font-size: x-large;
+    position: relative;
+    opacity: 0.5;
+    float: left;
+}
+
+i.fa+input {
+    padding-left: 26px;
+}
+
+i.fa-eye-slash {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-size: x-large;
+    opacity: 0.7;
+    margin: auto;
+    margin-left: -30px;
+    float: right;
+}
+
+i.fa-eye-slash+input {
+    padding-left: 26px;
+}
+
+i.fa-eye {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-size: x-large;
+    opacity: 0.7;
+    margin: auto;
+    margin-left: -30px;
+    float: right;
+}
+
+i.fa-eye+input {
+    padding-left: 26px;
+}
+
+i.fa-square-o {
+    opacity: 1;
+}
+
+i.fa-check-square-o {
+    opacity: 1;
+}
+
 .checkbox {
     position: relative;
-    margin-left: -95%;
+    margin-left: -80%;
+}
+
+.btn {
+    width: 80%;
+    display: flex;
+    margin-left: 26px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px;
+    background-color: #12b0ec;
+    color: white;
+    font-size: x-large;
+    border: none;
+    border-radius: 7px;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
